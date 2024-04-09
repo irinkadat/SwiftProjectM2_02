@@ -216,13 +216,13 @@
                         <outlet property="coffeeAdditive" destination="NVn-uc-QpE" id="4fr-ss-yZL"/>
                         <outlet property="coffeeTitle" destination="uw8-au-xZs" id="XRk-h6-ReZ"/>
                         <outlet property="favoriteIcon" destination="9Jw-gf-foi" id="fYi-jR-NJz"/>
-                        <outlet property="firstButton" destination="cvs-d8-BiR" id="cBo-gS-bS3"/>
                         <outlet property="image" destination="HBX-bk-ubx" id="8Ud-Sj-Hm1"/>
+                        <outlet property="largeButton" destination="cf4-sg-EG5" id="0lU-ox-n2j"/>
+                        <outlet property="mediumButton" destination="R3s-dV-iQI" id="xlK-Ft-Pyb"/>
                         <outlet property="numOfReviews" destination="hXV-vr-A08" id="Siv-fK-U33"/>
                         <outlet property="price" destination="ltf-bI-gVB" id="0rz-uE-zFa"/>
                         <outlet property="rating" destination="x7R-uG-eUN" id="0z9-qp-8NM"/>
-                        <outlet property="secButton" destination="R3s-dV-iQI" id="xlK-Ft-Pyb"/>
-                        <outlet property="thirdButton" destination="cf4-sg-EG5" id="0lU-ox-n2j"/>
+                        <outlet property="smallButton" destination="cvs-d8-BiR" id="cBo-gS-bS3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

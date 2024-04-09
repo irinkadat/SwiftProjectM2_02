@@ -15,9 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var favoriteIcon: UIImageView!
     @IBOutlet weak var rating: UILabel!
     @IBOutlet weak var numOfReviews: UILabel!
-    @IBOutlet weak var firstButton: UIButton!
-    @IBOutlet weak var secButton: UIButton!
-    @IBOutlet weak var thirdButton: UIButton!
+    @IBOutlet weak var smallButton: UIButton!
+    @IBOutlet weak var mediumButton: UIButton!
+    @IBOutlet weak var largeButton: UIButton!
     @IBOutlet weak var price: UILabel!
     
     var isFavorite = false
@@ -45,13 +45,6 @@ class ViewController: UIViewController {
         defaultButtonsStyle()
     }
     
-    struct Coffee {
-        var productName: String
-        var coffeeAdditive: String
-        var price: Double
-        var rating: Double
-        var numOfReviews: Int
-    }
     
     var coffee = Coffee(productName: "კაპუჩინო", coffeeAdditive: "შოკოლადით", price: 4.53, rating: 4.8, numOfReviews: 230)
     
@@ -65,7 +58,7 @@ class ViewController: UIViewController {
     }
 
     func changeButtonStyle(selectedButton: UIButton) {
-        let allButtons = [firstButton, secButton, thirdButton]
+        let allButtons = [smallButton, mediumButton, largeButton]
         for button in allButtons {
             setButtonAppearance(button!, isSelected: button == selectedButton)
             
@@ -73,21 +66,21 @@ class ViewController: UIViewController {
     }
     
     func defaultButtonsStyle() {
-        setButtonAppearance(firstButton, isSelected: false)
-        setButtonAppearance(secButton, isSelected: true)
-        setButtonAppearance(thirdButton, isSelected: false)
+        setButtonAppearance(smallButton, isSelected: false)
+        setButtonAppearance(mediumButton, isSelected: true)
+        setButtonAppearance(largeButton, isSelected: false)
     }
     
     
     func changePrice() {
 
-        if firstButton.isSelected {
+        if smallButton.isSelected {
             coffee.price = 2.40
         }
-        if secButton.isSelected {
+        if mediumButton.isSelected {
             coffee.price = 4.53
         }
-        if thirdButton.isSelected {
+        if largeButton.isSelected {
             coffee.price = 5.30
         }
         
@@ -112,26 +105,26 @@ class ViewController: UIViewController {
     
     
     @IBAction func smallSizeTapped(_ sender: Any) {
-        firstButton.isSelected = true
-        secButton.isSelected = false
-        thirdButton.isSelected = false
-        changeButtonStyle(selectedButton: firstButton)
+        smallButton.isSelected = true
+        mediumButton.isSelected = false
+        largeButton.isSelected = false
+        changeButtonStyle(selectedButton: smallButton)
         changePrice()
     }
     
     @IBAction func mediumSizeTapped(_ sender: Any) {
-        secButton.isSelected = true
-        firstButton.isSelected = false
-        thirdButton.isSelected = false
-        changeButtonStyle(selectedButton: secButton)
+        mediumButton.isSelected = true
+        smallButton.isSelected = false
+        largeButton.isSelected = false
+        changeButtonStyle(selectedButton: mediumButton)
         changePrice()
     }
     
     @IBAction func largeSizeTapped(_ sender: Any) {
-        thirdButton.isSelected = true
-        firstButton.isSelected = false
-        secButton.isSelected = false
-        changeButtonStyle(selectedButton: thirdButton)
+        largeButton.isSelected = true
+        smallButton.isSelected = false
+        mediumButton.isSelected = false
+        changeButtonStyle(selectedButton: largeButton)
         changePrice()
     }
 }
